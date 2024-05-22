@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const Room = new mongoose.Schema({
+const room = new mongoose.Schema({
     roomNumber: Number,
     roomFloor: Number,
     roomAvailable: Boolean,
@@ -10,3 +10,5 @@ const Room = new mongoose.Schema({
         require: true
     }
 })
+
+export default room

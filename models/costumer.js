@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Costumer = new mongoose.Schema({
+const costumer = new mongoose.Schema({
     costumerName: String,
     costumerCPF: String,
     costumerPhone: String,
@@ -8,3 +8,5 @@ const Costumer = new mongoose.Schema({
     costumerPassword: String,
     costumerAdminLevel: Number
 })
+
+export default costumer

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Booking = new mongoose.Schema({
+const booking = new mongoose.Schema({
     bookingRoom: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Room',
@@ -18,3 +18,5 @@ const Booking = new mongoose.Schema({
     bookingPrice: Number,
     bookingPayment: Boolean
 })
+
+export default booking
