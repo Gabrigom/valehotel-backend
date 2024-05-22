@@ -17,7 +17,7 @@ class CostumerServices{
     }
 
     Create(data){
-        const newCostumer = new Camera(data)
+        const newCostumer = new Costumer(data)
         return newCostumer.save()
     }
 

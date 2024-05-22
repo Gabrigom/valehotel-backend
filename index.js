@@ -3,15 +3,22 @@ import mongoose from "mongoose"
 
 const app = express()
 
+import costumerRoutes from "./routes/costumerRoutes.js"
+import patternRoutes from "./routes/patternRoutes.js"
+
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.use("/room", RoomController)
-app.use("/type", TypeController)
-app.use("/costume", CostumerController)
-app.use("/booking", BookingController)
+// app.use("/room", RoomController)
+app.use("/pattern", patternRoutes)
+app.use("/costumer", costumerRoutes)
+// app.use("/booking", BookingController)
 
-mongoose.connect("mongodb://localhost:27017/vale-hotel")
+mongoose.connect("mongodb://127.0.0.1:27017/vale-hotel")
+
+app.get("/", (req, res) =>{
+    res.send("Oi Mundo");
+});
 
 app.listen(4000, (erro) => {
     if(erro){
