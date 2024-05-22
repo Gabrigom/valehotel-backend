@@ -1,0 +1,17 @@
+{
+  "name": "valehotal-api",
+  "version": "1.0.0",
+  "description": "API para o projeto portfolio DSM3 com tema hotel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0"
+  },
+  "type": "module"
+}
