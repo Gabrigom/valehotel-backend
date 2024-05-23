@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import costumer from "../models/costumer.js"
 
-const Costumer = mongoose.model("costumer", costumer)
+const Costumer = mongoose.model("Costumer", costumer)
 
 class CostumerServices{
     SelectAll(){

@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import pattern from "../models/pattern.js"
 
-const Pattern = mongoose.model("pattern", pattern)
+const Pattern = mongoose.model("Pattern", pattern)
 
 class PatternServices{
     SelectAll(){

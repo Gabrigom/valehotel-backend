@@ -5,7 +5,7 @@ const bookingRoutes = express.Router()
 
 bookingRoutes.get("/view", bookingController.getAllBookings)
 bookingRoutes.get("/view/:id", bookingController.getOneBooking)
-bookingRoutes.get("/view/booking/:id", bookingController.getCostumerBookings)
+bookingRoutes.get("/view/costumer/:id", bookingController.getCostumerBookings)
 bookingRoutes.get("/view/room/:id", bookingController.getRoomBookings)
 
 bookingRoutes.post("/create", bookingController.createBooking)

@@ -1,4 +1,5 @@
 import BookingServices from "../services/BookingService.js"
+
 import { ObjectId } from "mongodb"
 
 const getAllBookings = async (req, res) => {

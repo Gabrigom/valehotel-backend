@@ -1,11 +1,11 @@
 import mongoose from "mongoose"
 import room from "../models/room.js"
 
-const Room = mongoose.model("room", room)
+const Room = mongoose.model("Room", room)
 
 class RoomServices{
     SelectAll(){
-        return Room.find()
+        return Room.find().populate("roomPattern")
     }
 
     SelectOne(id){

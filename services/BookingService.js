@@ -1,11 +1,11 @@
 import mongoose from "mongoose"
 import booking from "../models/booking.js"
 
-const Booking = mongoose.model("booking", booking)
+const Booking = mongoose.model("Booking", booking)
 
 class BookingServices{
     SelectAll(){
-        return Booking.find()
+        return Booking.find().populate("bookingCostumer").populate("bookingRoom")
     }
 
     SelectAllByCostumer(id){
@@ -17,7 +17,7 @@ class BookingServices{
     }
 
     SelectOne(id){
-        return Booking.findOne({_id: id}).populate("bookingCostumer").populate("bookingRoom")
+        return Booking.findOne({_id: id})
     }
 
     Delete(id){
