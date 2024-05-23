@@ -17,7 +17,7 @@ class PatternServices{
     }
 
     Create(data){
-        const newPattern = new Camera(data)
+        const newPattern = new Pattern(data)
         return newPattern.save()
     }
 

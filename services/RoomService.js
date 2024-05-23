@@ -17,7 +17,7 @@ class RoomServices{
     }
 
     Create(data){
-        const newRoom = new Camera(data)
+        const newRoom = new Room(data)
         return newRoom.save()
     }
 

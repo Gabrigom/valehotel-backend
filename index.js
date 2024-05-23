@@ -3,16 +3,18 @@ import mongoose from "mongoose"
 
 const app = express()
 
-import costumerRoutes from "./routes/costumerRoutes.js"
+import roomRoutes from "./routes/roomRoutes.js"
 import patternRoutes from "./routes/patternRoutes.js"
+import costumerRoutes from "./routes/costumerRoutes.js"
+import bookingRoutes from "./routes/bookingRoutes.js"
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-// app.use("/room", RoomController)
+app.use("/room", roomRoutes)
 app.use("/pattern", patternRoutes)
 app.use("/costumer", costumerRoutes)
-// app.use("/booking", BookingController)
+app.use("/booking", bookingRoutes)
 
 mongoose.connect("mongodb://127.0.0.1:27017/vale-hotel")
 

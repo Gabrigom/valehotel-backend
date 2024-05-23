@@ -8,8 +8,16 @@ class BookingServices{
         return Booking.find()
     }
 
+    SelectAllByCostumer(id){
+        return Booking.find({bookingCostumer: id}).populate("bookingCostumer")
+    }
+
+    SelectAllByRoom(id){
+        return Booking.find({bookingRoom: id}).populate("bookingRoom")
+    }
+
     SelectOne(id){
-        return Booking.findOne({_id: id})
+        return Booking.findOne({_id: id}).populate("bookingCostumer").populate("bookingRoom")
     }
 
     Delete(id){
@@ -17,7 +25,7 @@ class BookingServices{
     }
 
     Create(data){
-        const newBooking = new Camera(data)
+        const newBooking = new Booking(data)
         return newBooking.save()
     }
 

@@ -5,14 +5,14 @@ const pattern = new mongoose.Schema({
     patternDescription: String,
     patternSize: Number,
     patternDailyFee: Number,
-    patternBeds: Number,
+    patternCapacity: Number,
     patternShowers: Number,   
     patternExtras: {
         patternWifi: Boolean,
         patternPets: Boolean,
         patternAC: Boolean,
         patternService: Boolean,
-        patternAcessibility: Boolean,
+        patternMinibar: Boolean,
         patternTv: Boolean
     }
 })

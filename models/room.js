@@ -4,9 +4,9 @@ const room = new mongoose.Schema({
     roomNumber: Number,
     roomFloor: Number,
     roomAvailable: Boolean,
-    roomType: {
+    roomPattern: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Type',
+        ref: 'Pattern',
         require: true
     }
 })

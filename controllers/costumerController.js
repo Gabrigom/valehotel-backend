@@ -43,9 +43,7 @@ const updateCostumer = async (req, res) => {
             await CostumerServices.Update(id, data)
             res.sendStatus(200)
         }
-        else {
-            res.sendStatus(400)
-        }
+        else {res.sendStatus(400)}
     } catch(err){
         console.log(err)
         res.status(500).json({ err : 'Erro interno do servidor'})
@@ -62,9 +60,7 @@ const getOneCostumer = async(req, res) => {
             else
                 res.status(200).json({ costumer })
         }
-        else {
-            res.sendStatus(400)
-        }
+        else {res.sendStatus(400)}
     } catch(err){
         console.log(err)
         res.status(500).json({ err : 'Erro interno do servidor'})
