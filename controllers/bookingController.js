@@ -12,7 +12,7 @@ const getAllBookings = async (req, res) => {
     }
 }
 
-const getCostumerBookings = async(req,res) => {
+const getCostumerBookings = async (req,res) => {
     try {
         if(ObjectId.isValid(req.params.id)){
             const bookings = await BookingServices.SelectAllByCostumer(req.params.id)
@@ -25,7 +25,7 @@ const getCostumerBookings = async(req,res) => {
     }
 }
 
-const getRoomBookings = async(req,res) => {
+const getRoomBookings = async (req,res) => {
     try {
         if(ObjectId.isValid(req.params.id)){
             const bookings = await BookingServices.SelectAllByRoom(req.params.id)
@@ -77,7 +77,7 @@ const updateBooking = async (req, res) => {
     }
 }
 
-const getOneBooking = async(req, res) => {
+const getOneBooking = async (req, res) => {
     try {
         if (ObjectId.isValid(req.params.id)){
             const id = req.params.id
