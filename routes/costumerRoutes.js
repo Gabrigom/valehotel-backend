@@ -7,6 +7,8 @@ costumerRoutes.get("/view", costumerController.getAllCostumers)
 costumerRoutes.get("/view/:id", costumerController.getOneCostumer)
 
 costumerRoutes.post("/create", costumerController.createCostumer)
+costumerRoutes.post("/login", costumerController.loginCostumer)
+costumerRoutes.post("/logout", costumerController.logoutCostumer)
 
 costumerRoutes.delete("/delete/:id", costumerController.deleteCostumer)
 
