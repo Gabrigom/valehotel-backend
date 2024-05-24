@@ -12,6 +12,10 @@ class CostumerServices{
         return Costumer.findOne({_id: id})
     }
 
+    SelectOneByEmail(email) {
+        return Costumer.findOne({costumerEmail: email})
+    }
+
     Delete(id){
         return Costumer.findByIdAndDelete(id)
     }
