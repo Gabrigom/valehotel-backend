@@ -12,6 +12,10 @@ class RoomServices{
         return Room.findOne({_id: id})
     }
 
+    SelectAllByFields(filter) {
+        return Room.find().find(filter).populate("roomPattern")
+    }
+
     Delete(id){
         return Room.findByIdAndDelete(id)
     }
