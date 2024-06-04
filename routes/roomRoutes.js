@@ -7,6 +7,7 @@ roomRoutes.get("/view", roomController.getAllRooms)
 roomRoutes.get("/view/:id", roomController.getOneRoom)
 
 roomRoutes.post("/create", roomController.createRoom)
+roomRoutes.post("/search", roomController.searchRoom)
 
 roomRoutes.delete("/delete/:id", roomController.deleteRoom)
 
