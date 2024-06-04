@@ -68,11 +68,10 @@ export default {
     async searchRoom(req, res) {
         const query = req.body.query
         const fields = req.body.fields
-        const company = req.session.user.company
     
         try {
             const searchQuery = utils.generateSearchQuery(query, fields)
-            const operation = await RoomServices.SelectAllByFields(company, searchQuery)
+            const operation = await RoomServices.SelectAllByFields(searchQuery)
             res.send(operation)
         } catch (error) {
             console.log(error);

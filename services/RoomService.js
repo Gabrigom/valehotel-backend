@@ -12,8 +12,9 @@ class RoomServices{
         return Room.findOne({_id: id})
     }
 
-    SelectAllByFields(filter) {
-        return Room.find().find(filter).populate("roomPattern")
+    async SelectAllByFields(filter) {        
+        const operation = await Room.find().populate({path: "roomPattern", match: filter})
+        return operation.filter(room => room.roomPattern)
     }
 
     Delete(id){
