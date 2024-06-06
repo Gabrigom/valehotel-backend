@@ -24,7 +24,7 @@ app.use(session({
     }
 }));
 
-const openRoutes = ['/costumer/login', '/costumer/create', '/costumer/logout'];
+const openRoutes = ['/costumer/login', '/costumer/logout'];
 app.use((req, res, next) => {
     if (openRoutes.includes(req.path)) {
       return next();
@@ -40,7 +40,7 @@ app.use("/booking", bookingRoutes)
 mongoose.connect("mongodb://127.0.0.1:27017/vale-hotel")
 
 app.get("/", (req, res) =>{
-    res.send("Oi Mundo");
+    res.send(res.session.user);
 });
 
 app.listen(4000, (erro) => {
